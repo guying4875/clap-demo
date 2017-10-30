@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<!-- 开启垃圾回收站功能,HDFS文件删除后先进入垃圾回收站，垃圾回收站最长保留数据时间为1天，超过一天后就删除 -->   
+   	 <property>  
+       		 <name>fs.trash.interval</name>  
+       		 <value>1440</value>  
+    	</property>
+<!-- NameNode的URI。 -->
+	<property>
+		<name>fs.defaultFS</name>
+		<value>hdfs://node1:9000</value>
+	</property>
+<!--hadoop.tmp.dir 是hadoop文件系统依赖的基础配置，很多路径都依赖它。如果hdfs-site.xml中不配置namenode和datanode的存放位置，默认就放在这个路径中--> 
+	<property>
+                <name>hadoop.tmp.dir</name>
+                <value>file:/home/hadoop/hadoop-2.7.3/tmp</value>
+        </property>
+	<property>  
+        <!--hadoop访问文件的IO操作都需要通过代码库。因此，在很多情况下，io.file.buffer.size都被用来设置SequenceFile中用到的读/写缓存大小。不论是对硬盘或者是网络操作来讲，较大的缓存都可以提供更高的数据传输，但这也就意味着更大的内存消耗和延迟。这个参数要设置为系统页面大小的倍数，以byte为单位，默认值是4KB，一般情况下，可以设置为64KB（65536byte）,这里设置128K-->  
+        	<name>io.file.buffer.size</name>  
+        	<value>131072</value>  
+    	</property>  
+	<property>  
+  		<name>dfs.namenode.handler.count</name>  
+ 		 <value>200</value>  
+  	<description>The number of server threads for the namenode.</description>  
+	</property>  
+	<property>  
+ 		 <name>dfs.datanode.handler.count</name>  
+  		<value>100</value>  
+  		<description>The number of server threads for the datanode.</description>  
+	</property>
+	
+</configuration>

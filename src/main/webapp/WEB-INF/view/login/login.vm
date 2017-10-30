@@ -43,7 +43,7 @@
               <div class="widget-content">
                 <div class="padd">
                   <!-- Login form -->
-                  <form class="form-horizontal">
+                  <form class="form-horizontal" action="${rc.contextPath}/index.htm">
                     <!-- Email -->
                     <div class="form-group">
                       <label class="control-label col-lg-3" for="inputEmail">Email</label>
@@ -69,8 +69,8 @@
 					</div>
 					</div>
                         <div class="col-lg-9 col-lg-offset-2">
-							<button type="submit" class="btn btn-danger">Sign in</button>
-							<button type="reset" class="btn btn-default">Reset</button>
+							<button type="submit" class="btn btn-danger">登 录</button>
+							<button type="reset" class="btn btn-default">注 册</button>
 						</div>
                     <br />
                   </form>
