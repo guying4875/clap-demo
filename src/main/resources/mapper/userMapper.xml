@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
-<mapper namespace="com.hy.dao.IUserDao">  
-	
-	
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hy.dao.IUserDao">
+   <!-- <resultMap id="userMap" type="com.hy.entity.User">
+        <result column="uid" property="id" />
+        <result column="uid" property="name" />
+        <result column="email" property="email" />
+        <result column="password" property="password" />
+        <result column="phone" property="phone" />
+    </resultMap>
+    -->
+
+    <select id="selectPageOfUser" parameterType="page" resultType="user">
+        select * from (
+          select @rowno:=@rowno+1 as rowno,u.uid,u.email,u.phone,
+          u.sex,u.username userName from user u,(SELECT @rowno:=0) b
+          where @rowno+1 >= #{startRowNum}
+          <if test="params.username !=null and params.username !='' ">
+              u.username like '%'||#{params.username}||'%'
+          </if>
+        ) c where c.rowno &lt;= #{endRowNum}
+    </select>
+
+    <select id="selectCountOfUser" parameterType="page" resultType="int">
+        select count(1) from user u
+        <where>
+            <if test="params.username != null and params.username !='' ">
+                u.username like #{params.username}
+            </if>
+
+        </where>
+    </select>
+
 </mapper>

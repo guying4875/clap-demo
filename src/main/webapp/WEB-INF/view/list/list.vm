@@ -27,9 +27,9 @@
             #foreach ($item in $page.dataList)
                     <tr>
                         <td>${velocityCount}</td>
-                        <td>${item.name}</td>
-                        <td>India</td>
-                        <td>23/12/2012</td>
+                        <td>$!{item.userName}</td>
+                        <td>$!{item.phone}</td>
+                        <td>$!{item.email}</td>
                         <td>Paid</td>
                         <td><span class="label label-success">Active</span></td>
                         <td>

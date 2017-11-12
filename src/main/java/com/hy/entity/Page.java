@@ -1,6 +1,7 @@
 package com.hy.entity;
 
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -26,7 +27,7 @@ public class Page<T> {
     /**结束行号*/
     private int endRowNum;
     /**查询所用的参数*/
-    private Map<String,Object> params;
+    private Map<String,Object> params = new HashMap<String,Object>();
 
     /**获取总页数*/
     public int getTotailPageNum(){
@@ -73,7 +74,33 @@ public class Page<T> {
         this.dataList = dataList;
     }
 
+    public void setTotailPageNum(int totailPageNum) {
+        this.totailPageNum = totailPageNum;
+    }
+
+    public void setStartRowNum(int startRowNum) {
+        this.startRowNum = startRowNum;
+    }
+
+    public void setEndRowNum(int endRowNum) {
+        this.endRowNum = endRowNum;
+    }
+
+    public Map<String, Object> getParams() {
+        return this.params;
+    }
+
+    public void addParam(String key,Object value){
+        this.params.put(key,value);
+    }
+
+    public void setParams(Map<String, Object> params) {
+        this.params = params;
+    }
+
     public static void main(String args[]){
         System.out.print((19+10-1)/10);
     }
+
+
 }
