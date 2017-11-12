@@ -65,7 +65,6 @@
         numberOfPages:10,
         alignment:"left",
         pageUrl:function (type, page, current ){
-            console.info(type+"--"+page+"---"+current);
             return "${rc.contextPath}/server/list.htm?index="+page;
         },
         itemTexts:function (type, page, current){
