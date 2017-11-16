@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <!-- Title and other stuffs -->
-  <title>hy</title> 
+  <title>hy</title>
   <meta name="keywords" content="后台管理模版" />
   <meta name="description" content="JS代码网提供Bootstrap模版,后台管理系统模版,后台管理界面,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,26 +12,26 @@
   <!-- Stylesheets -->
   <link href="${rc.contextPath}/static/style/bootstrap.css" rel="stylesheet">
   <!-- Font awesome icon -->
-  <link rel="stylesheet" href="${rc.contextPath}/static/style/font-awesome.css"> 
+  <link rel="stylesheet" href="${rc.contextPath}/static/style/font-awesome.css">
   <!-- jQuery UI -->
-  <link rel="stylesheet" href="${rc.contextPath}/static/style/jquery-ui.css"> 
+  <link rel="stylesheet" href="${rc.contextPath}/static/style/jquery-ui.css">
   <!-- Calendar -->
   <link rel="stylesheet" href="${rc.contextPath}/static/style/fullcalendar.css">
   <!-- prettyPhoto -->
-  <link rel="stylesheet" href="${rc.contextPath}/static/style/prettyPhoto.css">  
+  <link rel="stylesheet" href="${rc.contextPath}/static/style/prettyPhoto.css">
   <!-- Star rating -->
   <link rel="stylesheet" href="${rc.contextPath}/static/style/rateit.css">
   <!-- Date picker -->
   <link rel="stylesheet" href="${rc.contextPath}/static/style/bootstrap-datetimepicker.min.css">
   <!-- CLEditor -->
-  <link rel="stylesheet" href="${rc.contextPath}/static/style/jquery.cleditor.css"> 
-  <!-- Bootstrap toggle -->
-  <link rel="stylesheet" href="${rc.contextPath}/static/style/bootstrap-switch.css">
+  <link rel="stylesheet" href="${rc.contextPath}/static/style/jquery.cleditor.css">
+  <!-- Bootstrap toggle
+  <link rel="stylesheet" href="${rc.contextPath}/static/style/bootstrap-switch.css"> -->
   <!-- Main stylesheet -->
   <link href="${rc.contextPath}/static/style/style.css" rel="stylesheet">
   <!-- Widgets stylesheet -->
-  <link href="${rc.contextPath}/static/style/widgets.css" rel="stylesheet">   
-  
+  <link href="${rc.contextPath}/static/style/widgets.css" rel="stylesheet">
+
   <!-- HTML5 Support for IE -->
   <!--[if lt IE 9]>
   <script src="${rc.contextPath}/static/js/html5shim.js"></script>
@@ -39,6 +39,7 @@
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="${rc.contextPath}/static/img/favicon/favicon.png">
+<<<<<<< HEAD
   
   <!-- Scroll to top -->
 <span class="totop"><a href="#"><i class="icon-chevron-up"></i></a></span> 
@@ -74,6 +75,19 @@
 <script src="${rc.contextPath}/static/js/custom.js"></script> <!-- Custom codes -->
 <script src="${rc.contextPath}/static/js/charts.js"></script> <!-- Charts & Graphs -->
   
+=======
+    <!-- paginator -->
+    <link rel="stylesheet" href="${rc.contextPath}/static/css/qunit-1.11.0.css">
+    <link rel="stylesheet" href="${rc.contextPath}/static/css/bootstrap-responsive.css">
+
+
+    <link rel="stylesheet" href="${rc.contextPath}/static/css/bootstrap.css">
+
+
+    <script src="${rc.contextPath}/static/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="${rc.contextPath}/static/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="${rc.contextPath}/static/js/bootstrap-paginator.js"></script>
+>>>>>>> branch 'master' of https://github.com/guying4875/clap-demo.git
 </head>
 
 <body>
@@ -88,11 +102,11 @@
 		  <!-- Site name for smallar screens -->
 		  <a href="index.html" class="navbar-brand hidden-lg">首页</a>
 		</div>
-      
-      <!-- Navigation starts -->
-      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">         
 
-        <ul class="nav navbar-nav">  
+      <!-- Navigation starts -->
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+
+        <ul class="nav navbar-nav">
 
           <!-- Upload to server link. Class "dropdown-big" creates big dropdown -->
           <li class="dropdown dropdown-big">
@@ -116,8 +130,8 @@
 					<div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
 						<span class="sr-only">完成80%</span>
 					</div>
-			    </div> 
-                <hr />             
+			    </div>
+                <hr />
                 <!-- Dropdown menu footer -->
                 <div class="drop-foot">
                   <a href="#">查看所有</a>
@@ -154,11 +168,11 @@
 		</form>
         <!-- Links -->
         <ul class="nav navbar-nav pull-right">
-          <li class="dropdown pull-right">            
+          <li class="dropdown pull-right">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-              <i class="icon-user"></i> 管理员 <b class="caret"></b>              
+              <i class="icon-user"></i> 管理员 <b class="caret"></b>
             </a>
-            
+
             <!-- Dropdown menu -->
             <ul class="dropdown-menu">
               <li><a href="#"><i class="icon-user"></i> 资料</a></li>
@@ -166,7 +180,7 @@
               <li><a href="login.html"><i class="icon-off"></i> 退出</a></li>
             </ul>
           </li>
-          
+
         </ul>
       </nav>
 
@@ -177,7 +191,7 @@
 <!-- Header starts -->
   <header>
     <div class="container">
-      <div class="row">
+      <div class="row" style="margin-left: -132px;margin-right: -155px;">
 
         <!-- Logo section -->
         <div class="col-md-4">
@@ -198,7 +212,7 @@
             <!-- Comment button with number of latest comments count -->
             <li class="dropdown dropdown-big">
               <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                <i class="icon-comments"></i> 聊天 <span   class="label label-info">6</span> 
+                <i class="icon-comments"></i> 聊天 <span   class="label label-info">6</span>
               </a>
 
                 <ul class="dropdown-menu">
@@ -223,19 +237,19 @@
                     <h6><a href="#">你在干撒呢?</a> <span class="label label-warning pull-right">14:42</span></h6>
                     <div class="clearfix"></div>
                     <hr />
-                  </li>                  
+                  </li>
                   <li>
                     <div class="drop-foot">
                       <a href="#">查看所有</a>
                     </div>
-                  </li>                                    
+                  </li>
                 </ul>
             </li>
 
             <!-- Message button with number of latest messages count-->
             <li class="dropdown dropdown-big">
               <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                <i class="icon-envelope-alt"></i> 收件箱 <span class="label label-primary">6</span> 
+                <i class="icon-envelope-alt"></i> 收件箱 <span class="label label-primary">6</span>
               </a>
 
                 <ul class="dropdown-menu">
@@ -261,14 +275,14 @@
                     <div class="drop-foot">
                       <a href="#">查看所有</a>
                     </div>
-                  </li>                                    
+                  </li>
                 </ul>
             </li>
 
             <!-- Members button with number of latest members count -->
             <li class="dropdown dropdown-big">
               <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                <i class="icon-user"></i> 用户 <span   class="label label-success">6</span> 
+                <i class="icon-user"></i> 用户 <span   class="label label-success">6</span>
               </a>
 
                 <ul class="dropdown-menu">
@@ -293,14 +307,14 @@
                     <h6><a href="#">Kumarasamy</a> <span class="label label-warning pull-right">免费</span></h6>
                     <div class="clearfix"></div>
                     <hr />
-                  </li>                  
+                  </li>
                   <li>
                     <div class="drop-foot">
                       <a href="#">查看所有</a>
                     </div>
-                  </li>                                    
+                  </li>
                 </ul>
-            </li> 
+            </li>
 
           </ul>
 
@@ -315,7 +329,7 @@
             <div class="hdata">
               <div class="mcol-left">
                 <!-- Icon with red background -->
-                <i class="icon-signal bred"></i> 
+                <i class="icon-signal bred"></i>
               </div>
               <div class="mcol-right">
                 <!-- Number of visitors -->
@@ -328,7 +342,7 @@
             <div class="hdata">
               <div class="mcol-left">
                 <!-- Icon with blue background -->
-                <i class="icon-user bblue"></i> 
+                <i class="icon-user bblue"></i>
               </div>
               <div class="mcol-right">
                 <!-- Number of visitors -->
@@ -341,14 +355,14 @@
             <div class="hdata">
               <div class="mcol-left">
                 <!-- Icon with green background -->
-                <i class="icon-money bgreen"></i> 
+                <i class="icon-money bgreen"></i>
               </div>
               <div class="mcol-right">
                 <!-- Number of visitors -->
                 <p><a href="#">5000</a><em>订单</em></p>
               </div>
               <div class="clearfix"></div>
-            </div>                        
+            </div>
 
           </div>
         </div>
@@ -372,7 +386,7 @@
         <ul id="nav">
           <!-- Main menu with font awesome icon -->
           <li><a href="index.html" class="open"><i class="icon-home"></i> 首页</a>
-            <!-- Sub menu markup 
+            <!-- Sub menu markup
             <ul>
               <li><a href="#">Submenu #1</a></li>
               <li><a href="#">Submenu #2</a></li>
@@ -392,7 +406,7 @@
               <li><a href="widgets2.html">插件页面 #2</a></li>
               <li><a href="widgets3.html">插件页面 #3</a></li>
             </ul>
-          </li>  
+          </li>
           <li class="has_sub"><a href="#"><i class="icon-file-alt"></i> 页面模块1 <span class="pull-right"><i class="icon-chevron-right"></i></span></a>
             <ul>
               <li><a href="post.html">表单Post</a></li>
@@ -403,7 +417,7 @@
               <li><a href="profile.html">个人资料</a></li>
               <li><a href="gallery.html">相册页面</a></li>
             </ul>
-          </li> 
+          </li>
           <li class="has_sub"><a href="#"><i class="icon-file-alt"></i> 页面模块2  <span class="pull-right"><i class="icon-chevron-right"></i></span></a>
             <ul>
               <li><a href="media.html">媒体</a></li>
@@ -413,8 +427,8 @@
               <li><a href="calendar.html">日历</a></li>
               <li><a href="grid.html">网格</a></li>
             </ul>
-          </li>                             
-          <li><a href="charts.html"><i class="icon-bar-chart"></i>图表</a></li> 
+          </li>
+          <li><a href="charts.html"><i class="icon-bar-chart"></i>图表</a></li>
           <li><a href="tables.html"><i class="icon-table"></i>表格</a></li>
           <li><a href="${rc.contextPath}/form.htm"><i class="icon-tasks"></i>表单</a></li>
           <li><a href="${rc.contextPath}/interface.htm"><i class="icon-magic"></i>UI图标</a></li>
@@ -426,16 +440,16 @@
 
   	  	<!-- Main bar -->
   	<div class="mainbar">
-      
+
 	    <!-- Page heading -->
 	    <div class="page-head">
 	      <h2 class="pull-left"><i class="icon-home"></i> 首页</h2>
 
         <!-- Breadcrumb -->
         <div class="bread-crumb pull-right">
-          <a href="index.html"><i class="icon-home"></i> 首页</a> 
+          <a href="index.html"><i class="icon-home"></i> 首页</a>
           <!-- Divider -->
-          <span class="divider">/</span> 
+          <span class="divider">/</span>
           <a href="#" class="bread-current">控制台</a>
         </div>
 
@@ -464,10 +478,46 @@
       </div>
     </div>
   </div>
-</footer> 	
+</footer>
 
 <!-- Footer ends -->
 
+<<<<<<< HEAD
+=======
+<!-- Scroll to top -->
+<span class="totop"><a href="#"><i class="icon-chevron-up"></i></a></span>
+
+<!-- JS -->
+<script src="${rc.contextPath}/static/js/jquery.js"></script> <!-- jQuery -->
+<script src="${rc.contextPath}/static/js/bootstrap.js"></script> <!-- Bootstrap -->
+<script src="${rc.contextPath}/static/js/jquery-ui-1.9.2.custom.min.js"></script> <!-- jQuery UI -->
+<script src="${rc.contextPath}/static/js/fullcalendar.min.js"></script> <!-- Full Google Calendar - Calendar -->
+<script src="${rc.contextPath}/static/js/jquery.rateit.min.js"></script> <!-- RateIt - Star rating -->
+<script src="${rc.contextPath}/static/js/jquery.prettyPhoto.js"></script> <!-- prettyPhoto -->
+
+<!-- jQuery Flot -->
+<script src="${rc.contextPath}/static/js/excanvas.min.js"></script>
+<script src="${rc.contextPath}/static/js/jquery.flot.js"></script>
+<script src="${rc.contextPath}/static/js/jquery.flot.resize.js"></script>
+<script src="${rc.contextPath}/static/js/jquery.flot.pie.js"></script>
+<script src="${rc.contextPath}/static/js/jquery.flot.stack.js"></script>
+
+<!-- jQuery Notification - Noty -->
+<script src="${rc.contextPath}/static/js/jquery.noty.js"></script> <!-- jQuery Notify -->
+<script src="${rc.contextPath}/static/js/themes/default.js"></script> <!-- jQuery Notify -->
+<script src="${rc.contextPath}/static/js/layouts/bottom.js"></script> <!-- jQuery Notify -->
+<script src="${rc.contextPath}/static/js/layouts/topRight.js"></script> <!-- jQuery Notify -->
+<script src="${rc.contextPath}/static/js/layouts/top.js"></script> <!-- jQuery Notify -->
+<!-- jQuery Notification ends -->
+
+<script src="${rc.contextPath}/static/js/sparklines.js"></script> <!-- Sparklines -->
+<script src="${rc.contextPath}/static/js/jquery.cleditor.min.js"></script> <!-- CLEditor -->
+<script src="${rc.contextPath}/static/js/bootstrap-datetimepicker.min.js"></script> <!-- Date picker -->
+<script src="${rc.contextPath}/static/js/bootstrap-switch.min.js"></script> <!-- Bootstrap Toggle -->
+<script src="${rc.contextPath}/static/js/filter.js"></script> <!-- Filter for support page -->
+<script src="${rc.contextPath}/static/js/custom.js"></script> <!-- Custom codes -->
+<script src="${rc.contextPath}/static/js/charts.js"></script> <!-- Charts & Graphs -->
+>>>>>>> branch 'master' of https://github.com/guying4875/clap-demo.git
 
 <!-- Script for this page -->
 <script type="text/javascript">
@@ -485,7 +535,7 @@ $(function () {
 
 
     var stack = 0, bars = true, lines = false, steps = false;
-    
+
     function plotWithOptions() {
         $.plot($("#bar-chart"), [ d1, d2 ], {
             series: {
@@ -507,7 +557,7 @@ $(function () {
     }
 
     plotWithOptions();
-    
+
     $(".stackControls input").click(function (e) {
         e.preventDefault();
         stack = $(this).val() == "With stacking" ? true : null;
@@ -569,21 +619,21 @@ $(function () {
             if (item) {
                 if (previousPoint != item.dataIndex) {
                     previousPoint = item.dataIndex;
-                    
+
                     $("#tooltip").remove();
                     var x = item.datapoint[0].toFixed(2),
                         y = item.datapoint[1].toFixed(2);
-                    
-                    showTooltip(item.pageX, item.pageY, 
+
+                    showTooltip(item.pageX, item.pageY,
                                 item.series.label + " of " + x + " = " + y);
                 }
             }
             else {
                 $("#tooltip").remove();
-                previousPoint = null;            
+                previousPoint = null;
             }
         }
-    }); 
+    });
 
     $("#curve-chart").bind("plotclick", function (event, pos, item) {
         if (item) {

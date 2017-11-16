@@ -24,6 +24,7 @@
             </tr>
             </thead>
             <tbody>
+<<<<<<< HEAD
 			#foreach($server in $lists)	
             <tr>
                 <td>${server.serveId}</td>
@@ -34,7 +35,23 @@
                 <td></td>
                 <td><span class="label label-success">Active</span></td>
                 <td>
+=======
+            #foreach ($item in $page.dataList)
+                    <tr>
+                        <td>${velocityCount}</td>
+                        <td>$!{item.userName}</td>
+                        <td>$!{item.phone}</td>
+                        <td>$!{item.email}</td>
+                        <td>Paid</td>
+                        <td><span class="label label-success">Active</span></td>
+                        <td>
 
+                            <button class="btn btn-xs btn-success"><i class="icon-ok"></i> </button>
+                            <button class="btn btn-xs btn-warning"><i class="icon-pencil"></i> </button>
+                            <button class="btn btn-xs btn-danger"><i class="icon-remove"></i> </button>
+>>>>>>> branch 'master' of https://github.com/guying4875/clap-demo.git
+
+<<<<<<< HEAD
                     <button class="btn btn-xs btn-success"><i class="icon-ok"></i> </button>
                     <button class="btn btn-xs btn-warning"><i class="icon-pencil"></i> </button>
                     <button class="btn btn-xs btn-danger"><i class="icon-remove"></i> </button>
@@ -81,23 +98,17 @@
             </tr>
            #end
 
+=======
+                        </td>
+                    </tr>
+            #end
+>>>>>>> branch 'master' of https://github.com/guying4875/clap-demo.git
             </tbody>
         </table>
 
-        <div class="widget-foot">
-
-
-            <ul class="pagination pull-right">
-                <li><a href="#">Prev</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">Next</a></li>
-            </ul>
-
-            <div class="clearfix"></div>
-
+        <div class="widget-foot" style="text-align: right;">
+            <!-- page index -->
+            <div id="example" ></div>
         </div>
 
     </div>
@@ -105,4 +116,37 @@
 </div>
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/guying4875/clap-demo.git
 <!-- Content ends -->
+
+
+<script type="text/javascript">
+    var options = {
+        currentPage: ${page.currentIndex},
+        totalPages: ${page.totailPageNum},
+        numberOfPages:10,
+        alignment:"left",
+        pageUrl:function (type, page, current ){
+            return "${rc.contextPath}/server/list.htm?index="+page;
+        },
+        itemTexts:function (type, page, current){
+            switch (type) {
+                case "first":
+                    return "首页";
+                case "prev":
+                    return "前一页";
+                case "next":
+                    return "后一页";
+                case "last":
+                    return "尾页";
+                case "page":
+                    return page;
+            }
+        }
+    }
+
+    $('#example').bootstrapPaginator(options);
+</script>

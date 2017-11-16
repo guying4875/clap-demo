@@ -13,6 +13,17 @@ public class User {
 	 * name
 	 */
 	private String name;
+
+	private String email;
+
+	private String password;
+
+	private String phone;
+
+	private String userName;
+
+	private String sex;
+
 	/**
 	 * 登录账号  - 对应数据库account字段
 	 */
@@ -36,4 +47,43 @@ public class User {
 		this.loginName = loginName;
 	}
 
+	public String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getPhone() {
+		return this.phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getUserName() {
+		return this.userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getSex() {
+		return this.sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
 }
