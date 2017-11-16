@@ -1,0 +1,17 @@
+<table>
+	<th>
+		<td>编号</td>
+		<td>姓名</td>
+		<td>服务项目</td>
+		<td>应收</td>
+		<td>实收</td>
+	</th>
+	
+	<tr>
+		<td>编号</td>
+		<td>姓名</td>
+		<td>服务项目</td>
+		<td>应收</td>
+		<td>实收</td>
+	</tr>
+</table>

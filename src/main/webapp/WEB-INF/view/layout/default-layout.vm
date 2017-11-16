@@ -39,9 +39,45 @@
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="${rc.contextPath}/static/img/favicon/favicon.png">
+  
+  <!-- Scroll to top -->
+<span class="totop"><a href="#"><i class="icon-chevron-up"></i></a></span> 
+
+<!-- JS -->
+<script src="${rc.contextPath}/static/js/jquery.js"></script> <!-- jQuery -->
+<script src="${rc.contextPath}/static/js/bootstrap.js"></script> <!-- Bootstrap -->
+<script src="${rc.contextPath}/static/js/jquery-ui-1.9.2.custom.min.js"></script> <!-- jQuery UI -->
+<script src="${rc.contextPath}/static/js/fullcalendar.min.js"></script> <!-- Full Google Calendar - Calendar -->
+<script src="${rc.contextPath}/static/js/jquery.rateit.min.js"></script> <!-- RateIt - Star rating -->
+<script src="${rc.contextPath}/static/js/jquery.prettyPhoto.js"></script> <!-- prettyPhoto -->
+
+<!-- jQuery Flot -->
+<script src="${rc.contextPath}/static/js/excanvas.min.js"></script>
+<script src="${rc.contextPath}/static/js/jquery.flot.js"></script>
+<script src="${rc.contextPath}/static/js/jquery.flot.resize.js"></script>
+<script src="${rc.contextPath}/static/js/jquery.flot.pie.js"></script>
+<script src="${rc.contextPath}/static/js/jquery.flot.stack.js"></script>
+
+<!-- jQuery Notification - Noty -->
+<script src="${rc.contextPath}/static/js/jquery.noty.js"></script> <!-- jQuery Notify -->
+<script src="${rc.contextPath}/static/js/themes/default.js"></script> <!-- jQuery Notify -->
+<script src="${rc.contextPath}/static/js/layouts/bottom.js"></script> <!-- jQuery Notify -->
+<script src="${rc.contextPath}/static/js/layouts/topRight.js"></script> <!-- jQuery Notify -->
+<script src="${rc.contextPath}/static/js/layouts/top.js"></script> <!-- jQuery Notify -->
+<!-- jQuery Notification ends -->
+
+<script src="${rc.contextPath}/static/js/sparklines.js"></script> <!-- Sparklines -->
+<script src="${rc.contextPath}/static/js/jquery.cleditor.min.js"></script> <!-- CLEditor -->
+<script src="${rc.contextPath}/static/js/bootstrap-datetimepicker.min.js"></script> <!-- Date picker -->
+<script src="${rc.contextPath}/static/js/bootstrap-switch.min.js"></script> <!-- Bootstrap Toggle -->
+<script src="${rc.contextPath}/static/js/filter.js"></script> <!-- Filter for support page -->
+<script src="${rc.contextPath}/static/js/custom.js"></script> <!-- Custom codes -->
+<script src="${rc.contextPath}/static/js/charts.js"></script> <!-- Charts & Graphs -->
+  
 </head>
 
 <body>
+<input type="hidden" id="_contextPath" value="${rc.contextPath}">
 	<div class="navbar navbar-fixed-top bs-docs-nav" role="banner">
     <div class="conjtainer">
       <!-- Menu button for smallar screens -->
@@ -432,39 +468,6 @@
 
 <!-- Footer ends -->
 
-<!-- Scroll to top -->
-<span class="totop"><a href="#"><i class="icon-chevron-up"></i></a></span> 
-
-<!-- JS -->
-<script src="${rc.contextPath}/static/js/jquery.js"></script> <!-- jQuery -->
-<script src="${rc.contextPath}/static/js/bootstrap.js"></script> <!-- Bootstrap -->
-<script src="${rc.contextPath}/static/js/jquery-ui-1.9.2.custom.min.js"></script> <!-- jQuery UI -->
-<script src="${rc.contextPath}/static/js/fullcalendar.min.js"></script> <!-- Full Google Calendar - Calendar -->
-<script src="${rc.contextPath}/static/js/jquery.rateit.min.js"></script> <!-- RateIt - Star rating -->
-<script src="${rc.contextPath}/static/js/jquery.prettyPhoto.js"></script> <!-- prettyPhoto -->
-
-<!-- jQuery Flot -->
-<script src="${rc.contextPath}/static/js/excanvas.min.js"></script>
-<script src="${rc.contextPath}/static/js/jquery.flot.js"></script>
-<script src="${rc.contextPath}/static/js/jquery.flot.resize.js"></script>
-<script src="${rc.contextPath}/static/js/jquery.flot.pie.js"></script>
-<script src="${rc.contextPath}/static/js/jquery.flot.stack.js"></script>
-
-<!-- jQuery Notification - Noty -->
-<script src="${rc.contextPath}/static/js/jquery.noty.js"></script> <!-- jQuery Notify -->
-<script src="${rc.contextPath}/static/js/themes/default.js"></script> <!-- jQuery Notify -->
-<script src="${rc.contextPath}/static/js/layouts/bottom.js"></script> <!-- jQuery Notify -->
-<script src="${rc.contextPath}/static/js/layouts/topRight.js"></script> <!-- jQuery Notify -->
-<script src="${rc.contextPath}/static/js/layouts/top.js"></script> <!-- jQuery Notify -->
-<!-- jQuery Notification ends -->
-
-<script src="${rc.contextPath}/static/js/sparklines.js"></script> <!-- Sparklines -->
-<script src="${rc.contextPath}/static/js/jquery.cleditor.min.js"></script> <!-- CLEditor -->
-<script src="${rc.contextPath}/static/js/bootstrap-datetimepicker.min.js"></script> <!-- Date picker -->
-<script src="${rc.contextPath}/static/js/bootstrap-switch.min.js"></script> <!-- Bootstrap Toggle -->
-<script src="${rc.contextPath}/static/js/filter.js"></script> <!-- Filter for support page -->
-<script src="${rc.contextPath}/static/js/custom.js"></script> <!-- Custom codes -->
-<script src="${rc.contextPath}/static/js/charts.js"></script> <!-- Charts & Graphs -->
 
 <!-- Script for this page -->
 <script type="text/javascript">

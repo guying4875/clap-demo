@@ -31,7 +31,7 @@ public class TuDoPageProcess implements PageProcessor {
 		String htmlStr = page.getHtml().get();
 		Document doc = Jsoup.parse(htmlStr);
 		Elements filter = doc.select("div.td__category__filter__panel__item");
-		filter.forEach(new TuDoCunsumer());
+//		filter.forEach(new TuDoCunsumer());
         // 部分三：从页面发现后续的url地址来抓取
 //        page.addTargetRequests(page.getHtml().links().regex("(https://www\\.tudou\\.com/.*)").all());
 	}

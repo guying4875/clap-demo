@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.hy.web.dao.ServerDao">
+<resultMap type="com.hy.entity.Server" id="servermap">
+	<id column="serve_id" property="serveId"/> 
+	<result column="serve_begin" property="serveBegin"/> 
+	<result column="serve_end" property="serveEnd"/> 
+	<result column="serve_insure" property="serveInsure"/> 
+	<result column="serve_amount" property="serveAmount"/> 
+	<collection property="emp" ofType="com.hy.entity.Employee">
+		<id column="emp_id" property="empId"/> 
+		<result column="emp_no" property="empNo"/>
+		<result column="emp_name" property="empName"/>	
+	</collection>
+
+</resultMap>
+	<select id="getAll" resultMap="servermap">
+		select * from serve s left join emp e on e.emp_id=s.emp_id;
+	</select>
+
+
+</mapper>

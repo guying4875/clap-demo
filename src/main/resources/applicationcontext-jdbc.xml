@@ -80,7 +80,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->  
     <bean id="authorityMapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
     	<!-- 加载rbac模型dao层； -->
-         <property name="basePackage" value="com.hy.dao" />
+         <property name="basePackage" value="com.hy.web.dao" />
         <property name="sqlSessionFactoryBeanName" value="authoritySqlSessionFactory"/> 
     </bean>  
     

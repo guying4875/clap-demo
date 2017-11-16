@@ -14,12 +14,13 @@
       
     <mappers>  
         <mapper resource="com/tgb/mapper/userMapper.xml" />  
-    </mappers>  -->
+    </mappers>  
     
     <plugins>
        <plugin interceptor="com.tiantian.mybatis.interceptor.PageInterceptor">
-           <property name="databaseType" value="Oracle"/>
+           <property name="databaseType" value="mysql"/>
        </plugin>
     </plugins>
+    -->
   
 </configuration>   

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.hy.web.dao.ManagerDao">
+<select id="getByPage" resultType="com.hy.entity.Manager">
+	select m.uid,m.uname,m.upassword,m.utime,r.rid,r.rname,r.control	 
+	from manager m left join role r on r.rid=m.rid
+</select>
+</mapper>
