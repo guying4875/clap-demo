@@ -1,7 +1,7 @@
 <div class="container">
           <!-- Today status. jQuery Sparkline plugin used. -->
       <div class="row">
-        <div class="col-md-12"> 
+        <div class="col-md-12">
           <!-- List starts -->
           <ul class="today-datas">
             <!-- List #1 -->
@@ -22,12 +22,12 @@
             <li>
               <div><span id="todayspark4" class="spark"></span></div>
               <div class="datas-text">$12,000 Revenue/Day</div>
-            </li> 
+            </li>
             <li>
               <div><span id="todayspark5" class="spark"></span></div>
               <div class="datas-text">15,000000 visitors till date</div>
-            </li>                                                                                                              
-          </ul> 
+            </li>
+          </ul>
         </div>
       </div>
           <!-- Today status ends -->
@@ -42,11 +42,11 @@
             <div class="widget-head">
               <div class="pull-left">图表</div>
               <div class="widget-icons pull-right">
-                <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a> 
+                <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
                 <a href="#" class="wclose"><i class="icon-remove"></i></a>
-              </div>  
+              </div>
               <div class="clearfix"></div>
-            </div>              
+            </div>
 
             <!-- Widget content -->
             <div class="widget-content">
@@ -58,7 +58,7 @@
                 <hr />
                 <!-- Hover location -->
                 <div id="hoverdata">Mouse hovers at
-                (<span id="x">0</span>, <span id="y">0</span>). <span id="clickdata"></span></div>          
+                (<span id="x">0</span>, <span id="y">0</span>). <span id="clickdata"></span></div>
 
                 <!-- Skil this line. <div class="uni"><input id="enableTooltip" type="checkbox">Enable tooltip</div> -->
 
@@ -76,11 +76,11 @@
             <div class="widget-head">
               <div class="pull-left">今天统计</div>
               <div class="widget-icons pull-right">
-                <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a> 
+                <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
                 <a href="#" class="wclose"><i class="icon-remove"></i></a>
-              </div>  
+              </div>
               <div class="clearfix"></div>
-            </div>             
+            </div>
 
             <div class="widget-content">
               <div class="padd">
@@ -104,10 +104,10 @@
                   </li>
                   <li>
                     <span id="status6"></span> <span class="bold">Bounce Rate : 2000</span>
-                  </li>   
+                  </li>
                   <li>
                     <span id="status7"></span> <span class="bold">% New Visits : 2000</span>
-                  </li>                                                                                                            
+                  </li>
                 </ul>
 
               </div>
@@ -129,23 +129,23 @@
                 <div class="widget-head">
                   <div class="pull-left">图表</div>
                   <div class="widget-icons pull-right">
-                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a> 
+                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
                     <a href="#" class="wclose"><i class="icon-remove"></i></a>
-                  </div>  
+                  </div>
                   <div class="clearfix"></div>
                 </div>
 
                 <div class="widget-content">
                   <!-- Widget content -->
                   <div class="padd">
-                    
+
                     <ul class="chats">
 
                       <!-- Chat by us. Use the class "by-me". -->
                       <li class="by-me">
                         <!-- Use the class "pull-left" in avatar -->
                         <div class="avatar pull-left">
-                          <img src="img/user.jpg" alt=""/>
+                          <img src="${rc.contextPath}/static/img/user.jpg" alt=""/>
                         </div>
 
                         <div class="chat-content">
@@ -154,13 +154,13 @@
                           Vivamus diam elit diam, consectetur dapibus adipiscing elit.
                           <div class="clearfix"></div>
                         </div>
-                      </li> 
+                      </li>
 
                       <!-- Chat by other. Use the class "by-other". -->
                       <li class="by-other">
                         <!-- Use the class "pull-right" in avatar -->
                         <div class="avatar pull-right">
-                          <img src="img/user.jpg" alt=""/>
+                          <img src="${rc.contextPath}/static/img/user.jpg" alt=""/>
                         </div>
 
                         <div class="chat-content">
@@ -169,11 +169,11 @@
                           Vivamus diam elit diam, consectetur fconsectetur dapibus adipiscing elit.
                           <div class="clearfix"></div>
                         </div>
-                      </li>   
+                      </li>
 
                       <li class="by-me">
                         <div class="avatar pull-left">
-                          <img src="img/user.jpg" alt=""/>
+                          <img src="${rc.contextPath}/static/img/user.jpg" alt=""/>
                         </div>
 
                         <div class="chat-content">
@@ -181,12 +181,12 @@
                           Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
                           <div class="clearfix"></div>
                         </div>
-                      </li>  
+                      </li>
 
                       <li class="by-other">
                         <!-- Use the class "pull-right" in avatar -->
                         <div class="avatar pull-right">
-                          <img src="img/user.jpg" alt=""/>
+                          <img src="${rc.contextPath}/static/img/user.jpg" alt=""/>
                         </div>
 
                         <div class="chat-content">
@@ -195,7 +195,7 @@
                           Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
                           <div class="clearfix"></div>
                         </div>
-                      </li>                                                                                  
+                      </li>
                     </ul>
                   </div>
                   <!-- Widget footer -->
@@ -208,7 +208,7 @@
                       </form>
                   </div>
                 </div>
-              </div> 
+              </div>
             </div>
 
 
@@ -219,9 +219,9 @@
                 <div class="widget-head">
                   <div class="pull-left">文件上传</div>
                   <div class="widget-icons pull-right">
-                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a> 
+                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
                     <a href="#" class="wclose"><i class="icon-remove"></i></a>
-                  </div>  
+                  </div>
                   <div class="clearfix"></div>
                 </div>
 
@@ -243,12 +243,12 @@
                     <li>
                       <strong><i class="icon-ok"></i> Third_File_Here.Mp3</strong>
                       <div class="file-meta">5MB - 5 mins - Stopped</div>
-                    </li>                        
+                    </li>
 
                     <li>
                       <strong><i class="icon-ok"></i> Third_File_Here.Mp3</strong>
                       <div class="file-meta">5MB - 5 mins - Stopped</div>
-                    </li>                                                                                                                      
+                    </li>
                   </ul>
 
                   <div class="widget-foot">
@@ -262,14 +262,14 @@
                 <div class="widget-head">
                   <div class="pull-left">浏览器统计</div>
                   <div class="widget-icons pull-right">
-                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a> 
+                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
                     <a href="#" class="wclose"><i class="icon-remove"></i></a>
-                  </div>  
+                  </div>
                   <div class="clearfix"></div>
                 </div>
                 <div class="widget-content referrer">
                   <!-- Widget content -->
-                  
+
                   <table class="table table-striped table-bordered table-hover">
                     <tr>
                       <th><center>#</center></th>
@@ -277,30 +277,30 @@
                       <th>Visits</th>
                     </tr>
                     <tr>
-                      <td><img src="img/icons/chrome.png" alt="" />
+                      <td><img src="${rc.contextPath}/static/img/icons/chrome.png" alt="" />
                       <td>Google Chrome</td>
                       <td>3,005</td>
-                    </tr> 
+                    </tr>
                     <tr>
-                      <td><img src="img/icons/firefox.png" alt="" />
+                      <td><img src="${rc.contextPath}/static/img/icons/firefox.png" alt="" />
                       <td>Mozilla Firefox</td>
                       <td>2,505</td>
-                    </tr> 
+                    </tr>
                     <tr>
-                      <td><img src="img/icons/ie.png" alt="" />
+                      <td><img src="${rc.contextPath}/static/img/icons/ie.png" alt="" />
                       <td>Internet Explorer</td>
                       <td>1,405</td>
-                    </tr> 
+                    </tr>
                     <tr>
-                      <td><img src="img/icons/opera.png" alt="" />
+                      <td><img src="${rc.contextPath}/static/img/icons/opera.png" alt="" />
                       <td>Opera</td>
                       <td>4,005</td>
-                    </tr> 
+                    </tr>
                     <tr>
-                      <td><img src="img/icons/safari.png" alt="" />
+                      <td><img src="${rc.contextPath}/static/img/icons/safari.png" alt="" />
                       <td>Safari</td>
                       <td>505</td>
-                    </tr>                                                                    
+                    </tr>
                   </table>
 
                   <div class="widget-foot">
@@ -318,9 +318,9 @@
                 <div class="widget-head">
                   <div class="pull-left">最近评论</div>
                   <div class="widget-icons pull-right">
-                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a> 
+                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
                     <a href="#" class="wclose"><i class="icon-remove"></i></a>
-                  </div>  
+                  </div>
                   <div class="clearfix"></div>
                 </div>
                 <div class="widget-content">
@@ -389,7 +389,7 @@
 
                           <div class="clearfix"></div>
                         </div>
-                      </li>                                        
+                      </li>
 
 
                     </ul>
@@ -397,8 +397,8 @@
                   </div>
                   <!-- Widget footer -->
                   <div class="widget-foot">
-                    
-                    
+
+
                       <ul class="pagination pull-right">
                         <li><a href="#">Prev</a></li>
                         <li><a href="#">1</a></li>
@@ -407,13 +407,13 @@
                         <li><a href="#">4</a></li>
                         <li><a href="#">Next</a></li>
                       </ul>
-                   
+
                     <div class="clearfix"></div>
 
                   </div>
-                </div>  
+                </div>
 
-              </div> 
+              </div>
 
             </div>
           </div>
@@ -425,14 +425,14 @@
                 <div class="widget-head">
                   <div class="pull-left">黑色图表</div>
                   <div class="widget-icons pull-right">
-                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a> 
+                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
                     <a href="#" class="wclose"><i class="icon-remove"></i></a>
-                  </div>  
+                  </div>
                   <div class="clearfix"></div>
                 </div>
                 <div class="widget-content">
                   <div class="padd">
-                    
+
                    <div id="bar-chart"></div>
 
                   </div>
@@ -440,16 +440,16 @@
                     <!-- Footer goes here -->
                   </div>
                 </div>
-              </div> 
+              </div>
             </div>
             <div class="col-md-6">
               <div class="widget">
                 <div class="widget-head">
                   <div class="pull-left">快速提交</div>
                   <div class="widget-icons pull-right">
-                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a> 
+                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
                     <a href="#" class="wclose"><i class="icon-remove"></i></a>
-                  </div>  
+                  </div>
                   <div class="clearfix"></div>
                 </div>
                 <div class="widget-content">
@@ -460,30 +460,30 @@ s                      <div class="form quick-post">
                                           <!-- Title -->
                                           <div class="form-group">
                                             <label class="control-label col-lg-3" for="title">Title</label>
-                                            <div class="col-lg-9"> 
+                                            <div class="col-lg-9">
                                               <input type="text" class="form-control" id="title">
                                             </div>
-                                          </div>   
+                                          </div>
                                           <!-- Content -->
                                           <div class="form-group">
                                             <label class="control-label col-lg-3" for="content">Content</label>
                                             <div class="col-lg-9">
                                               <textarea class="form-control" id="content"></textarea>
                                             </div>
-                                          </div>                           
+                                          </div>
                                           <!-- Cateogry -->
                                           <div class="form-group">
                                             <label class="control-label col-lg-3">Category</label>
-                                            <div class="col-lg-9">                               
+                                            <div class="col-lg-9">
                                                 <select class="form-control">
                                                   <option value="">- Choose Cateogry -</option>
                                                   <option value="1">General</option>
                                                   <option value="2">News</option>
                                                   <option value="3">Media</option>
                                                   <option value="4">Funny</option>
-                                                </select>  
+                                                </select>
                                             </div>
-                                          </div>              
+                                          </div>
                                           <!-- Tags -->
                                           <div class="form-group">
                                             <label class="control-label col-lg-3" for="tags">Tags</label>
@@ -491,7 +491,7 @@ s                      <div class="form quick-post">
                                               <input type="text" class="form-control" id="tags">
                                             </div>
                                           </div>
-                                          
+
                                           <!-- Buttons -->
                                           <div class="form-group">
                                              <!-- Buttons -->
@@ -508,9 +508,9 @@ s                      <div class="form quick-post">
                     <!-- Footer goes here -->
                   </div>
                 </div>
-              </div> 
-            </div>            
-          </div>  
+              </div>
+            </div>
+          </div>
 
 
         </div>
