@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.hy.web.dao.ResourceDao">
+<select id="getCountOfResource" resultType="int" parameterType="com.hy.entity.Page">
+select count(*) from hy_base_resource;
+</select>
+<select id="getPageofResource" resultType="com.hy.entity.Resource" parameterType="com.hy.entity.Page" >
+select * from(
+select @rownum:=@rownum+1 as rownum ,r.id,r.name,r.url,r.level,r.parent_id,r.is_menu,r.state,r.create_time,r.modify_time 
+from hy_base_resource r,
+(select @rownum:=0) b where @rownum+1>=#{startRowNum}
+) c where c.rownum &lt;=#{endRowNum}	
+</select>
+<insert id="doadd" parameterType="com.hy.entity.Resource">
+	insert into hy_base_resource(name,url,level,parent_id,is_menu,state,create_time,modify_time) 
+	values(#{name},#{url},#{level},#{parent_id},#{is_menu},#{state},#{create_time},#{modify_time})
+</insert>
+<select id="getResourceById" parameterType="int" resultType="com.hy.entity.Resource">
+	select r.name,r.url,r.level,r.parent_id,r.is_menu,r.state,r.create_time,r.modify_time
+	from hy_base_resource r where r.id=#{id}
+</select>
+<update id="updateResource" parameterType="com.hy.entity.Resource">
+	update hy_base_resource set name=#{name},url=#{url},level=#{level},
+	parent_id=#{parent_id},is_menu=#{is_menu},state=#{state},
+	create_time=#{create_time},modify_time=#{modify_time} where id=#{id}
+</update>
+<delete id="deleteById" parameterType="int">
+	delete  from hy_base_resource where id=#{id}
+</delete>
+</mapper>
