@@ -1,3 +1,37 @@
-<div>
-	修改也
+<div class="widget">
+    <div class="widget-head">
+        <div class="pull-left">Tables</div>
+        <div class="widget-icons pull-right">
+            <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
+            <a href="#" class="wclose"><i class="icon-remove"></i></a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="widget-content">
+    <form action="${rc.contextPath}/manage/doupdate.htm" method="post">
+        <table class="table table-striped table-bordered table-hover">
+            <tbody>
+            <input name="uid"/>
+			<tr>               
+                <td>用户名</td>
+                <td>
+                ${manage.uname}              
+                </td>
+             </tr>   
+                <td>角色名称</td> 
+                <td>
+                <select id="role" name="rname">
+              	
+                </select>                     
+                </td>         
+            </tr>
+            <tr><td colspan="2"><input  type="submit" value="修改"/></td></tr>
+            </tbody>
+        </table>
+        </form>
+    </div>
+
 </div>
+<script type="text/javascript" src="${rc.contextPath}/static/js/manage-list.js">
+</script>
+<!-- Content ends -->

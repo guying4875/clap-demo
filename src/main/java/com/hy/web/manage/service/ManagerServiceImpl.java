@@ -20,4 +20,16 @@ public class ManagerServiceImpl implements MangerService {
 
 		return managerDao.getByPage();
 	}
+
+	@Override
+	public Manager getById(Integer uid) {
+		
+		return managerDao.getById(uid);
+	}
+
+	@Override
+	public List<Manager> getAll() {
+		
+		return managerDao.getAll();
+	}
 }

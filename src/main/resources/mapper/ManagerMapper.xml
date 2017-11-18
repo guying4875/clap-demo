@@ -2,8 +2,26 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
 <mapper namespace="com.hy.web.dao.ManagerDao">
-<select id="getByPage" resultType="com.hy.entity.Manager">
+<resultMap type="com.hy.entity.Manager" id="managermap">
+	<id column="uid" property="uid"/>
+	<result column="uname" property="uname"/>
+	<result column="upassword" property="upassword"/>
+	<result column="utime" property="utime"/>
+	<collection property="role" ofType="com.hy.entity.Role">
+	<id column="rid" property="rid"/>
+	<result column="rname" property="rname"/>
+	<result column="control" property="control"/>
+	</collection>
+</resultMap>
+<select id="getByPage" resultMap="managermap">
 	select m.uid,m.uname,m.upassword,m.utime,r.rid,r.rname,r.control	 
 	from manager m left join role r on r.rid=m.rid
+</select>
+<select id="getById" resultMap="managermap" parameterType="java.lang.Integer">
+  select m.uid,m.uname,m.upassword,m.utime,r.rid,r.rname,r.control
+  from manager m left join role r on r.rid=m.rid where m.uid=#{uid}
+</select>
+<select id="getAll" resultMap="managermap">
+	select m.uid,m.uname,m.upassword,m.utime from manager m;
 </select>
 </mapper>
