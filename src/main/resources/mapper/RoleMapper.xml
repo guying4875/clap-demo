@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hy.web.dao.RoleDao">
+
+<select id="getCountOfResource" resultType="int" parameterType="com.hy.entity.Page">
+		select count(1) from hy_base_role r where name like '%'||#{params.name}||'%'
+</select>
+
+	<select id="selectRoleForPage" resultType="role" parameterType="page">
+		select * from(
+			select @rownum:=@rownum+1 as rownum ,r.id,r.name,
+					r.commont,r.create_time createTime
+			  from hy_base_role r, (select @rownum:=0) b
+				where name like '%'||#{params.name}||'%'
+				and @rownum+1 >= #{startRowNum} order by r.create_time desc
+		) c where c.rownum &lt;= #{endRowNum}
+	</select>
+<insert id="doadd" parameterType="com.hy.entity.Resource">
+	insert into hy_base_role (name,commont,create_time)
+	values (#{name},#{commont},now())
+</insert>
+
+<update id="updateResource" parameterType="com.hy.entity.Resource">
+	update hy_base_resource set name=#{name},url=#{url},level=#{level},
+	parent_id=#{parentId},is_menu=#{isMenu},state=#{state},
+	create_time=#{createTime},modify_time=#{modifyTime} where id=#{id}
+</update>
+<delete id="deleteRoleById" parameterType="int">
+	delete from hy_base_resource where id=#{id}
+</delete>
+</mapper>
