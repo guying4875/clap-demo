@@ -69,13 +69,10 @@
                         <a class="btn but-primary" href="${rc.contextPath}/resource/toAdd.htm">添加</a>
                     </div>
                     <div class="col-md-9" style="text-align: right" >
+                        <!-- page index -->
                         <div id="example"  ></div>
                     </div>
                 </div>
-
-                <!-- page index -->
-                    <!-- page index -->
-
             </div>
         </div>
     </div>
