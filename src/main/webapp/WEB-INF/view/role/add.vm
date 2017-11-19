@@ -1,0 +1,24 @@
+<div class="widget">
+    <div class="widget-head">
+        <div class="pull-left">添加角色</div>
+        <div class="widget-icons pull-right">
+            <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
+            <a href="#" class="wclose"><i class="icon-remove"></i></a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <form action="${rc.contextPath}/role/doadd.htm" method="post">
+    <div class="widget-content">
+        <table class="table table-striped table-bordered table-hover">
+            <tbody>
+				<tr>
+            		<td>角色名称</td>
+            		<td><input type="text" name="name" value=""/></td>
+            	</tr>          
+            </tbody>
+        </table>
+        <div align="center"><input type="submit" value="添加"/></div>
+    </div>
+</div>
+</form>
+<!-- Content ends -->

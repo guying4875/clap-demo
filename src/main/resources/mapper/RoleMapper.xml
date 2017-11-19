@@ -3,11 +3,11 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hy.web.dao.RoleDao">
 
-<select id="getCountOfResource" resultType="int" parameterType="com.hy.entity.Page">
+<select id="getCountOfRole" resultType="int" parameterType="com.hy.entity.Page">
 		select count(1) from hy_base_role r where name like '%'||#{params.name}||'%'
 </select>
 
-	<select id="selectRoleForPage" resultType="role" parameterType="page">
+	<select id="getDataOfRole" resultType="role" parameterType="page">
 		select * from(
 			select @rownum:=@rownum+1 as rownum ,r.id,r.name,
 					r.commont,r.create_time createTime

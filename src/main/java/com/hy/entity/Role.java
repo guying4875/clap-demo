@@ -4,35 +4,45 @@ import java.util.Date;
 
 /**
  * 角色实体类
- * rid int primary key comment '角色id',
-rname varchar(20) comment '角色名称',
-pid int comment '权限id',
-control varchar(20)
+ * 
  * @author Administrator
  *
  */
 public class Role {
-	private Integer rid;
-	private String rname;
-	private String control;
-	private Date createTime;
-	public Integer getRid() {
-		return rid;
+	private Integer id;
+	private String name;
+	private	Date createTime;
+	private Date modifyTime;
+	private String commont;
+	
+	public String getCommont() {
+		return commont;
 	}
-	public void setRid(Integer rid) {
-		this.rid = rid;
+	public void setCommont(String commont) {
+		this.commont = commont;
 	}
-	public String getRname() {
-		return rname;
+	public Integer getId() {
+		return id;
 	}
-	public void setRname(String rname) {
-		this.rname = rname;
+	public void setId(Integer id) {
+		this.id = id;
 	}
-	public String getControl() {
-		return control;
+	public String getName() {
+		return name;
 	}
-	public void setControl(String control) {
-		this.control = control;
+	public void setName(String name) {
+		this.name = name;
 	}
-
+	public Date getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+	public Date getModifyTime() {
+		return modifyTime;
+	}
+	public void setModifyTime(Date modifyTime) {
+		this.modifyTime = modifyTime;
+	}
 }
