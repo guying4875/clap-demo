@@ -48,7 +48,7 @@ public class Resource {
 	public int getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -63,10 +63,10 @@ public class Resource {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	public int getLevel() {
+	public Integer getLevel() {
 		return level;
 	}
-	public void setLevel(int level) {
+	public void setLevel(Integer level) {
 		this.level = level;
 	}
 

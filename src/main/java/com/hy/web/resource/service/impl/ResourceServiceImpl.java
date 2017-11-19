@@ -1,5 +1,6 @@
 package com.hy.web.resource.service.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +26,7 @@ public class ResourceServiceImpl implements ResourceService {
 		return resourceDao.getPageofResource(page);
 	}
 
-	@Override
-	public void doadd(Resource resource) {
-		resourceDao.doadd(resource);		
-	}
+
 
 	@Override
 	public Resource getResourceById(int id) {
@@ -46,6 +44,12 @@ public class ResourceServiceImpl implements ResourceService {
 	public void updateResource(Resource resource) {
 		resourceDao.updateResource(resource);
 		
+	}
+
+	@Override
+	public void doadd(String name, String url, int level, int state, Date createTime, Date modifyTime) {
+		
+		resourceDao.doadd(name,url,level,state,createTime,modifyTime);
 	}
 
 	

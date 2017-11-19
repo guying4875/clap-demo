@@ -41,11 +41,11 @@
             	</tr>
             	<tr>
             		<td>创建时间</td> 
-            		<td><input type="text" name="create_time" value="${resource.create_time}"/></td>        	
+            		<td><input type="text" name="create_time" value="${resource.createTime}"/></td>        	
             	</tr>
             	<tr>
             		<td>修改时间</td> 
-            		<td><input type="text" name="modify_time" value="${resource.modify_time}"/></td>        	
+            		<td><input type="text" name="modify_time" value="${resource.modifyTime}"/></td>        	
             	</tr>
             </tbody>
         </table> 

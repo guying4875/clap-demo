@@ -1,5 +1,6 @@
 package com.hy.web.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import com.hy.entity.Page;
@@ -11,12 +12,12 @@ public interface ResourceDao {
 
 	List<Resource> getPageofResource(Page<Resource> page);
 
-	void doadd(Resource resource);
-
 	Resource getResourceById(int id);
 
 	void deleteById(int id);
 
 	void updateResource(Resource resource);
+
+	void doadd(String name, String url, int level, int state, Date createTime, Date modifyTime);
 
 }

@@ -2,27 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hy.web.dao.ResourceDao">
-	<resultMap id="resourcemap" type="com.hy.entity.Resource">
-		<id column="id" property="id"></id>
-		<result column="name" property="name"></result>
-		<result column="url" property="url"></result>
-		<result column="level" property="level"></result>
-		<result column="parent_id" property="parentId"></result>
-		<result column="is_menu" property="isMenu"></result>
-		<result column="state" property="state"></result>
-		<result column="create_time" property="createTime"></result>
-		<result property="modifyTime" column="modify_time"></result>
-	</resultMap>
-	<parameterMap id="" type="">
-		<parameter property=""></parameter>
-
-
-
-
-
-	</parameterMap>
+<resultMap type="com.hy.entity.Resource" id="resourcemap">
+	<id column="id" property="id"></id>
+	<result column="name" property="name"/>
+	<result column="url" property="url"/>
+	<result column="level" property="level"/>
+	<result column="parent_id" property="parentId"/>
+	<result column="is_menu" property="isMenu"/>
+	<result column="state" property="state"/>
+	<result column="create_time" property="createTime"/>
+	<result column="modify_time" property="modifyTime"/>
+</resultMap>
 <select id="getCountOfResource" resultType="int" parameterType="com.hy.entity.Page">
-select count(*) from hy_base_resource;
+select count(*) from hy_base_resource
 </select>
 <select id="getPageofResource" resultMap="resourcemap" parameterType="com.hy.entity.Page" >
 select * from(
@@ -33,7 +25,7 @@ from hy_base_resource r,
 </select>
 <insert id="doadd" parameterType="com.hy.entity.Resource">
 	insert into hy_base_resource(name,url,level,parent_id,is_menu,state,create_time,modify_time)
-	values(#{name},#{url},#{level},#{parentId},#{isMenu},#{state},#{creatTime},#{modifyTime})
+	values(#{id},#{name},#{url},#{level},#{parentId},#{isMenu},#{state},#{createTime},#{modifyTime})
 </insert>
 <select id="getResourceById" parameterType="int" resultMap="resourcemap">
 	select r.name,r.url,r.level,r.parent_id,r.is_menu,r.state,r.create_time,r.modify_time

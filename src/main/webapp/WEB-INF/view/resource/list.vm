@@ -27,8 +27,8 @@
             		  <td>${item.url}</td>
             		  <td>${item.level}</td>
             		  <td>${item.state}</td>
-            		  <td>${item.create_time}</td>
-            		  <td>${item.modify_time}</td>
+            		  <td>${item.createTime}</td>
+            		  <td>${item.modifyTime}</td>
             		  <td>
             		  <a href="${rc.contextPath}/resource/toupdate.htm?id=${item.id}">修改</a>
             		  <a href="${rc.contextPath}/resource/delete.htm?id=${item.id}">删除</a>

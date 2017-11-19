@@ -38,9 +38,10 @@ public class ResourceController {
 	}
 
 	@RequestMapping("doadd")
-	public String doadd(@RequestParam("name")String name){
-//		resourceService.doadd(name)
-		return "redirect:/resource/list.htm";
+	public String doadd(@RequestParam("name")String name,@RequestParam("url")String url,
+			@RequestParam("level")int level,@RequestParam("state")int state){
+		resourceService.doadd(name,url,level,state);
+		return "forward:/resource/list.htm";
 	}
 	@RequestMapping("toupdate")
 	public ModelAndView toupdate(@RequestParam("id") int id){
