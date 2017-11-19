@@ -16,7 +16,7 @@ public class ResourceServiceImpl implements ResourceService {
 	private ResourceDao resourceDao;
 	@Override
 	public int getCountOfResource(Page<Resource> page) {
-		
+
 		return resourceDao.getCountOfResource(page);
 	}
 
@@ -37,20 +37,20 @@ public class ResourceServiceImpl implements ResourceService {
 	@Override
 	public void deleteById(int id) {
 		resourceDao.deleteById(id);
-		
+
 	}
 
 	@Override
 	public void updateResource(Resource resource) {
 		resourceDao.updateResource(resource);
-		
+
 	}
 
 	@Override
-	public void doadd(String name, String url, int level, int state, Date createTime, Date modifyTime) {
-		
-		resourceDao.doadd(name,url,level,state,createTime,modifyTime);
+	public void doadd(Resource resource) {
+
+		resourceDao.doadd(resource);
 	}
 
-	
+
 }

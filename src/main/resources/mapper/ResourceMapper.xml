@@ -8,32 +8,33 @@
 	<result column="url" property="url"/>
 	<result column="level" property="level"/>
 	<result column="parent_id" property="parentId"/>
-	<result column="is_menu" property="isMenu"/>
+	<result column="is_menu" property="menuFlag"/>
 	<result column="state" property="state"/>
 	<result column="create_time" property="createTime"/>
 	<result column="modify_time" property="modifyTime"/>
 </resultMap>
 <select id="getCountOfResource" resultType="int" parameterType="com.hy.entity.Page">
-select count(*) from hy_base_resource
+  select count(*) from hy_base_resource
 </select>
 <select id="getPageofResource" resultMap="resourcemap" parameterType="com.hy.entity.Page" >
-select * from(
-select @rownum:=@rownum+1 as rownum ,r.id,r.name,r.url,r.level,r.parent_id,r.is_menu,r.state,r.create_time,r.modify_time
-from hy_base_resource r,
-(select @rownum:=0) b where @rownum+1>=#{startRowNum}
-) c where c.rownum &lt;=#{endRowNum}
+    select * from(
+    select @rownum:=@rownum+1 as rownum ,r.id,r.name,r.url,r.level,r.parent_id,r.is_menu,r.state,r.create_time,r.modify_time
+    from hy_base_resource r,
+    (select @rownum:=0) b where @rownum+1>=#{startRowNum}
+    ) c where c.rownum &lt;=#{endRowNum}
 </select>
 <insert id="doadd" parameterType="com.hy.entity.Resource">
-	insert into hy_base_resource(name,url,level,parent_id,is_menu,state,create_time,modify_time)
-	values(#{id},#{name},#{url},#{level},#{parentId},#{isMenu},#{state},#{createTime},#{modifyTime})
+	insert into hy_base_resource(name,url,level,parent_id,is_menu,state,create_time)
+	values(#{name},#{url},#{level},#{parentId},#{menuFlag},#{state},now())
 </insert>
 <select id="getResourceById" parameterType="int" resultMap="resourcemap">
-	select r.name,r.url,r.level,r.parent_id,r.is_menu,r.state,r.create_time,r.modify_time
+	select r.name,r.url,r.level,r.parent_id parentId,r.is_menu menuFlag,r.state state,
+	r.create_time,r.modify_time
 	from hy_base_resource r where r.id=#{id}
 </select>
 <update id="updateResource" parameterType="com.hy.entity.Resource">
 	update hy_base_resource set name=#{name},url=#{url},level=#{level},
-	parent_id=#{parentId},is_menu=#{isMenu},state=#{state},
+	parent_id=#{parentId},is_menu=#{menuFlag},state=#{state},
 	create_time=#{createTime},modify_time=#{modifyTime} where id=#{id}
 </update>
 <delete id="deleteById" parameterType="int">

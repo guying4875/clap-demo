@@ -8,7 +8,7 @@ public class Resource {
 	private String url;
 	private int level;
 	private int parentId;
-	private int isMenu;
+	private int menuFlag = 0;
 	private int state;
 	private Date createTime;
 	private Date modifyTime;
@@ -21,12 +21,20 @@ public class Resource {
 		this.parentId = parentId;
 	}
 
-	public int getIsMenu() {
-		return this.isMenu;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public void setIsMenu(int isMenu) {
-		this.isMenu = isMenu;
+	public void setLevel(int level) {
+		this.level = level;
+	}
+
+	public int getMenuFlag() {
+		return this.menuFlag;
+	}
+
+	public void setMenuFlag(int menuFlag) {
+		this.menuFlag = menuFlag;
 	}
 
 	public Date getCreateTime() {

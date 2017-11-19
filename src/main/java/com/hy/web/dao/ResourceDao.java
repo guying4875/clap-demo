@@ -18,6 +18,6 @@ public interface ResourceDao {
 
 	void updateResource(Resource resource);
 
-	void doadd(String name, String url, int level, int state, Date createTime, Date modifyTime);
+	void doadd(Resource resource);
 
 }

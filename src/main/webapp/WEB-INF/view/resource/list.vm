@@ -16,19 +16,17 @@
             		<th>资源级别</th>
             		<th>状态</th>
             		<th>创建时间</th>
-            		<th>修改时间</th>
-            		<th>操作</th>    	
+            		<th>操作</th>
             	</tr>
             </thead>
             <tbody>
             #foreach($item in $page.dataList)
-				<tr>				
-            		  <td>${item.name}</td> 
+				<tr>
+            		  <td>${item.name}</td>
             		  <td>${item.url}</td>
             		  <td>${item.level}</td>
             		  <td>${item.state}</td>
-            		  <td>${item.createTime}</td>
-            		  <td>${item.modifyTime}</td>
+            		  <td>$!date.format('yyyy-MM-dd',${item.createTime})</td>
             		  <td>
             		  <a href="${rc.contextPath}/resource/toupdate.htm?id=${item.id}">修改</a>
             		  <a href="${rc.contextPath}/resource/delete.htm?id=${item.id}">删除</a>
@@ -37,15 +35,15 @@
             	#end
 				<tr>
 					<td colspan="6"><a href="${rc.contextPath}/resource/toAdd.htm">添加</a></td>
-				</tr>   	
-            	
+				</tr>
+
             </tbody>
         </table>
         <div class="widget-foot" style="text-align: right;">
             <!-- page index -->
             <div id="example" ></div>
-        </div>      
-    </div>    
+        </div>
+    </div>
 </div>
 <script type="text/javascript">
     var options = {

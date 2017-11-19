@@ -39,8 +39,13 @@ public class ResourceController {
 
 	@RequestMapping("doadd")
 	public String doadd(@RequestParam("name")String name,@RequestParam("url")String url,
-			@RequestParam("level")int level,@RequestParam("state")int state){
-		resourceService.doadd(name,url,level,state);
+			@RequestParam("level")int level,@RequestParam(value="menu",defaultValue = "0")int menu){
+		Resource resource = new Resource();
+		resource.setName(name);
+		resource.setUrl(url);
+		resource.setLevel(level);
+		resource.setMenuFlag(menu);
+		resourceService.doadd(resource);
 		return "forward:/resource/list.htm";
 	}
 	@RequestMapping("toupdate")
