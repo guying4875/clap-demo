@@ -29,17 +29,17 @@ public class ResourceController {
 		page.setDataList(listResource);
 		mv.addObject("page",page);
 		return mv;
-		} 
-	
+		}
+
 	@RequestMapping("toAdd")
 	public ModelAndView toAdd(){
 		ModelAndView mv=new ModelAndView("resource/add");
 		return mv;
 	}
-	
+
 	@RequestMapping("doadd")
-	public String doadd(Resource resource){
-		resourceService.doadd(resource);
+	public String doadd(@RequestParam("name")String name){
+//		resourceService.doadd(name)
 		return "redirect:/resource/list.htm";
 	}
 	@RequestMapping("toupdate")
@@ -49,14 +49,14 @@ public class ResourceController {
 		 mv.addObject("resource", resource);
 		 return mv;
 	}
-	
+
 	@RequestMapping("doupdate")
 	public String doupdate(Resource resource){
 		resourceService.updateResource(resource);
-		 
+
 		 return "redirect:/resource/list.htm";
 	}
-	
+
 	@RequestMapping("delete")
 	public String delete(@RequestParam("id") int id){
 		resourceService.deleteById(id);

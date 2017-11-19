@@ -1,4 +1,7 @@
 package com.hy.entity;
+
+import java.util.Date;
+
 /**
  * 角色实体类
  * rid int primary key comment '角色id',
@@ -12,13 +15,7 @@ public class Role {
 	private Integer rid;
 	private String rname;
 	private String control;
-	private Privilege privilege;//权限
-	public Privilege getPrivilege() {
-		return privilege;
-	}
-	public void setPrivilege(Privilege privilege) {
-		this.privilege = privilege;
-	}
+	private Date createTime;
 	public Integer getRid() {
 		return rid;
 	}
@@ -37,5 +34,5 @@ public class Role {
 	public void setControl(String control) {
 		this.control = control;
 	}
-	
+
 }
