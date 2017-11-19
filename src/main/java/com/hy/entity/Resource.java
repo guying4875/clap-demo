@@ -7,11 +7,11 @@ public class Resource {
 	private String name;
 	private String url;
 	private Integer level;
-	private Integer parent_id;
-	private Integer is_menu;
+	private Integer parentId;
+	private Integer isMenu;
 	private Integer state;
-	private Date create_time;
-	private Date modify_time;
+	private Date createTime;
+	private Date modifyTime;
 	public Integer getId() {
 		return id;
 	}
@@ -36,43 +36,35 @@ public class Resource {
 	public void setLevel(Integer level) {
 		this.level = level;
 	}
-	public Integer getParent_id() {
-		return parent_id;
-	}
-	public void setParent_id(Integer parent_id) {
-		this.parent_id = parent_id;
-	}
-	public Integer getIs_menu() {
-		return is_menu;
-	}
-	public void setIs_menu(Integer is_menu) {
-		this.is_menu = is_menu;
-	}
 	public Integer getState() {
 		return state;
 	}
 	public void setState(Integer state) {
 		this.state = state;
 	}
-	public Date getCreate_time() {
-		return create_time;
+	public Integer getIsMenu() {
+		return isMenu;
 	}
-	public void setCreate_time(Date create_time) {
-		this.create_time = create_time;
+	public void setIsMenu(Integer isMenu) {
+		this.isMenu = isMenu;
 	}
-	public Date getModify_time() {
-		return modify_time;
+	public Date getCreateTime() {
+		return createTime;
 	}
-	public void setModify_time(Date modify_time) {
-		this.modify_time = modify_time;
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
-	@Override
-	public String toString() {
-		return "Resource [id=" + id + ", name=" + name + ", url=" + url + ", level=" + level + ", parent_id="
-				+ parent_id + ", is_menu=" + is_menu + ", state=" + state + ", create_time=" + create_time
-				+ ", modify_time=" + modify_time + "]";
+	public Date getModifyTime() {
+		return modifyTime;
 	}
-	
-	
-	 
+	public void setModifyTime(Date modifyTime) {
+		this.modifyTime = modifyTime;
+	}
+	public Integer getParentId() {
+		return parentId;
+	}
+	public void setParentId(Integer parentId) {
+		this.parentId = parentId;
+	}
+
 }

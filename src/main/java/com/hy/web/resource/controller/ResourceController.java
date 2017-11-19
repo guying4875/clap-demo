@@ -1,5 +1,6 @@
 package com.hy.web.resource.controller;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,9 +39,10 @@ public class ResourceController {
 	}
 	
 	@RequestMapping("doadd")
-	public String doadd(Resource resource){
-		resourceService.doadd(resource);
-		return "redirect:/resource/list.htm";
+	public String doadd(@RequestParam("name")String name,@RequestParam("url")String url,
+			@RequestParam("level")int level,@RequestParam("state")int state){
+		resourceService.doadd(name,url,level,state);
+		return "forward:/resource/list.htm";
 	}
 	@RequestMapping("toupdate")
 	public ModelAndView toupdate(@RequestParam("id") int id){
